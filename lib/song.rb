@@ -1,4 +1,3 @@
-require 'pry'
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -35,7 +34,6 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-    #if the song doesn't exist, create it. Otherwise, return the song instance
     self.find_by_name(name) == nil ? self.create_by_name(name) : self.find_by_name(name) 
   end
   
